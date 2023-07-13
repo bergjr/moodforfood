@@ -1,0 +1,72 @@
+[
+  {
+    "name": "burgers",
+    "photo": "burger.jpg",
+    "id": 1,
+    "products": [
+      {
+        "name": "Burger",
+        "price": 6.50,
+        "id": 1,
+        "photo": "burger.jpg",
+        "description": "Four 100% Irish beef patties, a slice of cheese, lettuce, onion and pickles. And the sauce, the special Mood For Food mayo. Burger comes with chips."
+      },
+      {
+        "name": "Cheeseburger",
+        "price": 7.50,
+        "id": 2,
+        "photo": "burger.jpg",
+        "description": "Four 100% Irish beef patties, a slice of cheese, lettuce, onion and pickles. And the sauce, the special Mood For Food mayo. Burger comes with chips."
+      },
+      {
+        "name": "Quarter Pounder",
+        "price": 10,
+        "id": 3,
+        "photo": "burger.jpg",
+        "description": "A quarter-pound patty of 100% Irish beef, with two slices of cheese, onions, pickles, mustard and a dollop of tomato ketchup in a sesame seed bun. Irresistible. Burger comes with chips."
+      },
+      {
+        "name": "Monster",
+        "price": 14,
+        "id": 4,
+        "photo": "burger.jpg",
+        "description": "Four 100% Irish beef patties, a slice of cheese, lettuce, onion and pickles. And the sauce, the special Mood For Food mayo. Burger comes with chips."
+      }
+    ]
+  },
+  {
+    "name": "drinks",
+    "photo": "drinks.jpg",
+    "id": 2
+  },
+  {
+    "name": "desserts",
+    "photo": "dessert.jpg",
+    "id": 3
+  },
+  {
+    "name": "arab",
+    "photo": "arab.jpg",
+    "id": 4
+  },
+  {
+    "name": "japanese",
+    "photo": "japanese.jpg",
+    "id": 5
+  },
+  {
+    "name": "indian",
+    "photo": "indian.jpg",
+    "id": 6
+  },
+  {
+    "name": "pizzas",
+    "photo": "pizza.jpg",
+    "id": 7
+  },
+  {
+    "name": "pasta",
+    "photo": "pasta.jpg",
+    "id": 8
+  }
+]

@@ -1,0 +1,17 @@
+@import "styles/abstract/variables.scss";
+
+.logo {
+  a {
+    display: flex;
+    align-items: center;
+    .logo-box {
+      width: 60px;
+      height: 60px;
+    }
+    h2 {
+      color: #000000;
+      @include size-font(1rem, $primary-font);
+      font-weight: 600;
+    }
+  }
+}

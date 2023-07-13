@@ -1,0 +1,50 @@
+@import "styles/abstract/variables.scss";
+
+.menu {
+    margin-left: auto;
+    position: relative;
+    ul.menu-desktop {
+        display: none;  
+        
+    }
+    .cart {
+        position: relative;
+        padding: .5rem;
+        border: 1px solid $dark-gray;
+        display: flex;
+        border-radius: 10px;
+        gap: .5rem;
+        align-items: center;
+        svg {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+        .counter {
+            @include size-font(.8em, $secondary-font);
+        }
+    }
+    ul.menu-icons {
+        display: flex;
+        li {
+            svg {
+                width: auto;
+                height: 30px;
+                cursor: pointer;
+            }
+        }
+    }   
+}
+
+@media screen and (min-width: 1024px){
+    .menu {
+        ul.menu-desktop {
+            display: flex;
+            gap: 1rem;
+            color: #000000;
+            @include size-font(1.4em, $primary-font);
+        }
+        ul.menu-icons {
+            display: none;
+        }
+    }
+}

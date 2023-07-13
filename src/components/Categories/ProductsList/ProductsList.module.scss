@@ -1,0 +1,36 @@
+@import "styles/abstract/variables.scss";
+
+.products {
+    width: 100%;
+    height: auto;
+    padding: 4rem 0;
+    .products-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        li {
+            position: relative;
+            width: 20%;
+            height: 450px;
+            overflow: hidden;
+            transition: all .2s;
+            &:hover {
+                border: 5px solid $primary-color;
+                border-radius: 20px;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .info {
+                position: absolute;
+                bottom: 1rem;
+                left: 1rem;
+                @include size-font(2rem, $primary-font);
+                color: #FFFFFF;
+            }
+        }
+    }
+}

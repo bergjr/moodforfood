@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&display=swap');
+
+// Colors
+
+$primary-color: #990000;
+$secondary-color: #FF5B00;
+$light-gray: #F6F6F6;
+$dark-gray: #a3a8a8;
+
+//Font-Colors 
+
+$font-white: #FFFFFF;
+
+// Fonts
+
+$primary-font: 'Belanosima';
+$secondary-font: 'Kanit';
+
+// Mixins 
+
+@mixin size-font($size, $font) {
+    font-family: $font;
+    font-size: $size;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
