@@ -7,7 +7,8 @@ ProductContext.displayName = "Product"
 export const ProductProvider = ({ children }) => {
   const [showProductModal, setShowProductModal] = useState(false);
   const [productsList, setProductsList] = useState([]);
-  const [selectedProduct, setSelectedProduct] = useState({})
+  const [selectedProduct, setSelectedProduct] = useState({});
+  const [quantity, setQuantity] = useState(1);
 
   return (
     <ProductContext.Provider
@@ -18,7 +19,9 @@ export const ProductProvider = ({ children }) => {
         showProductModal,
         setShowProductModal,
         selectedProduct,
-        setSelectedProduct
+        setSelectedProduct,
+        quantity,
+        setQuantity
       }}
     >
       {children}
@@ -35,7 +38,9 @@ export const useProductContext = () => {
       showProductModal,
       setShowProductModal,
       selectedProduct,
-      setSelectedProduct 
+      setSelectedProduct,
+      quantity,
+      setQuantity 
     } 
     = useContext(ProductContext);
 
@@ -51,8 +56,13 @@ export const useProductContext = () => {
     setSelectedProduct(product);
   }
 
+  function changeQuantity(newQuantity) {
+    setQuantity((oldQuantity) => (oldQuantity += newQuantity));
+  }
+
   function closeModal() {
     setShowProductModal(false);
+    setQuantity(1);
   }
 
   return {
@@ -62,6 +72,8 @@ export const useProductContext = () => {
     showProductModal,
     selectProduct,
     selectedProduct,
-    closeModal
+    closeModal,
+    quantity,
+    changeQuantity
   };
 };

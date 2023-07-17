@@ -1,0 +1,71 @@
+@import "styles/abstract/variables.scss";
+
+.cart {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 30%;
+  background-color: white;
+  z-index: 20;
+  padding: 1rem;
+  .box-top {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 1.2rem;
+    h2 {
+      @include size-font(1.5rem, $primary-font);
+    }
+    svg {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+  .box-list {
+    @include flex-column;
+    gap: 1rem;
+    width: 100%;
+    overflow: scroll;
+    height: 400px;
+    padding: .5rem;
+    li {
+      display: flex;
+      border: 2px solid $dark-gray;
+      .img-container {
+        width: 30%;
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .info-container {
+        width: 70%;
+        display: grid;
+        padding: 1rem;
+        grid-template-areas: "name price"
+                             "buttons buttons";
+        grid-template-columns: 70% 20%;
+        grid-template-rows: 50% 50%;
+        h3 {
+          grid-area: name;
+        }
+        p.price {
+          grid-area: price;
+        }
+        .buttons-container {
+          grid-area: buttons;
+          display: flex;
+          align-items: center;
+          gap: 1.5rem;
+        }
+      }
+    }
+  }
+  .box-bottom {
+    h2 {
+      @include size-font(1.5em, $primary-font);
+      border-top: 2px dashed #000000;
+      padding: 1rem;
+    }
+  }
+}

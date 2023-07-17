@@ -5,7 +5,7 @@ import {BsCart4} from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 
 const Menu = (props) => {
-    const {totalToPay} = useCartContext();   
+    const { totalToPay, openCartHandler } = useCartContext();   
     return (
         <nav className={styles.menu}>
             <ul className={styles['menu-desktop']}>
@@ -13,7 +13,7 @@ const Menu = (props) => {
                     <Link to="/products">Products</Link>
                 </li>
                 <li>
-                    <button className={styles.cart}>
+                    <button className={styles.cart} onClick={openCartHandler}>
                         <BsCart4 />
                         <p className={styles.counter}>€ {totalToPay}</p>
                     </button>

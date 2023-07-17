@@ -1,23 +1,26 @@
 import { useProductContext } from "./ProductContext";
-
-const { createContext, useState, useContext, useEffect } = require("react");
+import { createContext, useState, useContext, useEffect } from "react";
 
 export const CartContext = createContext();
+CartContext.displayName = "Cart";
 
 export const CartProvider = ({ children }) => {
-  const [quantity, setQuantity] = useState(0);
   const [cart, setCart] = useState([]);
   const [totalToPay, setTotalToPay] = useState(0);
+  const [showCart, setShowCart] = useState(false);
+  const [showSnackBar, setShowSnackBar] = useState(false);
 
   return (
     <CartContext.Provider
       value={{
-        quantity,
-        setQuantity,
         cart,
         setCart,
         totalToPay,
-        setTotalToPay
+        setTotalToPay,
+        showCart,
+        setShowCart,
+        showSnackBar,
+        setShowSnackBar
       }}
     >
       {children}
@@ -25,36 +28,82 @@ export const CartProvider = ({ children }) => {
   );
 };
 
-export const  useCartContext = () => {
-  const {cart, quantity, setQuantity, setCart, totalToPay, setTotalToPay} = useContext(CartContext);
-  const {closeModal} = useProductContext();
+export const useCartContext = () => {
+  const {
+    cart,
+    setCart,
+    totalToPay,
+    setTotalToPay,
+    showCart,
+    setShowCart,
+    showSnackBar,
+    setShowSnackBar
+  } = useContext(CartContext);
 
-  function addToCart(product) {
-    setCart((oldCart) => 
-      [...oldCart, {...product, quantity: quantity}]
-    )
-    setQuantity(0);
+  const { closeModal, quantity, setQuantity } = useProductContext();
+
+  function addToCart(newProduct) {
+    const productExist = cart.some((product) => product.id === newProduct.id);
+    setShowSnackBar(true);
     closeModal();
+    if (!productExist) {
+      
+      return setCart((oldCart) => [...oldCart, { ...newProduct, quantity: quantity }]);
+    }
+    const updatedCart = cart.map(product => {
+      if(product.id === newProduct.id) 
+        product.quantity += quantity;
+      return product;  
+    })
+    setCart(updatedCart);
   }
 
   useEffect(() => {
     const newTotal = cart.reduce(
-      (counter, product) => counter += (product.price * product.quantity), 0);
-      setTotalToPay(newTotal);
-      console.log("atualizou")
-  }, [cart, setTotalToPay])
-  
-  function changeQuantity (newQuantity) {
-    setQuantity(oldQuantity => oldQuantity += newQuantity); 
+      (counter, product) => (counter += product.price * product.quantity),
+      0
+    );
+    setTotalToPay(newTotal);
+    // setCart((oldCart) => oldCart.filter((product) => product.quantity > 0));
+  }, [cart, setTotalToPay]);
+
+  function openCartHandler() {
+    setShowCart(!showCart);
   }
 
+  //Updates the quantity att in the product object
+  function updateQuantity(id, quantity) {
+    let isTheLast = null;
+    const updatedCart = cart.map((product) => {
+      if (id === product.id) {
+        product.quantity += quantity;
+        // Check if the product is the last of its kind in the cart
+        if(product.quantity < 1) {
+          isTheLast = product.id;
+        }
+      }
+      return product;
+    });
+    // Remove the product from the cart if it was the last one
+    if(isTheLast) {
+      return setCart(updatedCart.filter(product => product.id !== isTheLast));
+    }
+    return setCart(updatedCart);
+  }
 
+  function closeSnackBar() {
+    setShowSnackBar(false);
+  }
 
-  return ({
+  return {
     quantity,
-    setQuantity,
-    changeQuantity,
     addToCart,
-    totalToPay
-  })
+    totalToPay,
+    showCart,
+    openCartHandler,
+    cart,
+    updateQuantity,
+    showSnackBar,
+    closeSnackBar
+  };
 };

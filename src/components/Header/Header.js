@@ -4,6 +4,7 @@ import Logo from "./Logo/Logo";
 import Menu from "./Menu/Menu";
 import MenuMobile from "./Menu/MenuMobile";
 import { useMediaQuery } from "react-responsive";
+import Cart from "components/Cart/Cart";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -44,6 +45,7 @@ const Header = () => {
       {isMobile && (
         <MenuMobile isMenuOpen={isMenuOpen} menuHandler={menuHandler} />
       )}
+      <Cart />
     </header>
   );
 };
