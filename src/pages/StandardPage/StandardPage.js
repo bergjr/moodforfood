@@ -3,6 +3,7 @@ import styles from "./StandardPage.module.scss";
 import { Outlet } from "react-router-dom";
 import { Alert, Slide, Snackbar } from "@mui/material";
 import { useCartContext } from "common/context/CartContext";
+import Footer from "components/Footer/Footer";
 
 export function TransitionDown(props) {
   return <Slide {...props} direction="down" />;
@@ -11,6 +12,7 @@ export function TransitionDown(props) {
 const StandardPage = () => {
   const { showSnackBar, closeSnackBar } = useCartContext();
   return (
+    <>
     <main className={styles.main}>
       <Outlet />
       <Snackbar
@@ -25,6 +27,8 @@ const StandardPage = () => {
         </Alert>
       </Snackbar>
     </main>
+    <Footer />
+    </>
   );
 };
 

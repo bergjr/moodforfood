@@ -1,10 +1,12 @@
 import React from 'react';
-import styles from './MainPage.module.scss'
-import Categories from 'components/Categories/Categories';
+import CategoriesGallery from 'components/Categories/CategoriesGallery';
+import Banner from 'components/Banner/Banner';
+
 const MainPage = () => {
     return (
         <>
-            <Categories />
+            <CategoriesGallery />
+            <Banner />
         </>
     );
 }

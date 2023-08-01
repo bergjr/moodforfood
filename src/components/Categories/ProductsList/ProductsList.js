@@ -1,15 +1,16 @@
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styles from "./ProductsList.module.scss";
 import { useProductContext } from "common/context/ProductContext";
 import { memo, useEffect } from "react";
 
-const ProductsList = () => {
-  const { productsList = [], updateProducts, selectProduct} = useProductContext();
-  const { name } = useParams();
 
+const ProductsList = ({category}) => {
+  const { productsList, selectProduct, updateProducts} = useProductContext();
+  
   useEffect(() => {
-    updateProducts(name);
-  }, [name]);
+    updateProducts(category.id);
+  }, [category.id]);
+  
 
   return (
     <section id="products" className={styles.products}>
@@ -23,6 +24,9 @@ const ProductsList = () => {
                   <h2>{product.name}</h2>
                   <p>€ {product.price}</p>
                 </div>
+                {/* <div className={styles.spinner}>
+                  <CircularProgress color="error"/>
+                </div> */}
             </li>
           );
         })}

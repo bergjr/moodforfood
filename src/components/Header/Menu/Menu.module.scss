@@ -4,47 +4,53 @@
     margin-left: auto;
     position: relative;
     ul.menu-desktop {
-        display: none;  
-        
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        color: #000000;
+        @include size-font(1.4em, $primary-font);
     }
     .cart {
         position: relative;
-        padding: .5rem;
-        border: 1px solid $dark-gray;
+        padding: .8rem;
+        border: none;
         display: flex;
         border-radius: 10px;
         gap: .5rem;
         align-items: center;
-        svg {
-            width: 1.5rem;
-            height: 1.5rem;
-        }
-        .counter {
-            @include size-font(.8em, $secondary-font);
+        background-color: $primary-color;
+        color: white;
+        font-weight: bold;
+        box-shadow: 0px 6px 8px #bdb5b5;
+        transition: all .3s;
+        &:hover {
+            background-color: $primary-color;
+            box-shadow: none;
+            transform: scale(98%);
         }
     }
     ul.menu-icons {
-        display: flex;
-        li {
-            svg {
-                width: auto;
-                height: 30px;
-                cursor: pointer;
-            }
-        }
+        display: none;
     }   
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (max-width: 780px){
     .menu {
         ul.menu-desktop {
-            display: flex;
-            gap: 1rem;
-            color: #000000;
-            @include size-font(1.4em, $primary-font);
-        }
-        ul.menu-icons {
             display: none;
         }
+        ul.menu-icons {
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 1rem;
+            align-items: center;
+            li {
+                svg {
+                    width: auto;
+                    height: 30px;
+                    cursor: pointer;
+                }
+            }
+        }   
     }
 }

@@ -18,11 +18,9 @@ function RoutesApp() {
           <Routes>
             <Route path="/" element={<StandardPage />}>
               <Route index element={<MainPage />} />
-              <Route path="/categories/:name" element={<CategoriesPage />} />
-              <Route
-                path="/categories/:name/product/:idProduct"
-                element={<MainPage />}
-              />
+              <Route path="/categories" element={<CategoriesPage />} >
+                <Route path="/categories/:id" element={<CategoriesPage />} />
+              </Route>
             </Route>
           </Routes>
           </PaymentProvider>

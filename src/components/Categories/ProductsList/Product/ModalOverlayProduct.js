@@ -1,8 +1,7 @@
 import React from 'react';
 import styles from './ModalOverlayProduct.module.scss';
-// import { AiFillMinusCircle, AiFillPlusCircle } from "react-icons/ai";
 import { Button, IconButton } from '@mui/material';
-import {RemoveCircle, AddCircle} from '@mui/icons-material';
+import {RemoveCircle, AddCircle, Cancel} from '@mui/icons-material';
 
 const ModalOverlayProduct = ({
     product = {},
@@ -10,12 +9,16 @@ const ModalOverlayProduct = ({
     quantity,
     onAdd,
     onShow,
+    closeModal
   }) => {
     const img = product.photo ? require(`assets/categories/${product.photo}`) : "";
   
     return (
       <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
         <div className={styles["modal-container"]}>
+          <IconButton className={styles['close-button']} onClick={closeModal}>
+            <Cancel fontSize='large'/>
+          </IconButton>
           <div className={styles["img-container"]}>
             <img src={img} alt={product?.name} />
           </div>
@@ -38,7 +41,7 @@ const ModalOverlayProduct = ({
             </IconButton>
           </div>
           <Button disabled={quantity <= 0} className={styles['add-cart']} variant="contained" onClick={() => onAdd(product)}>
-            Add to Cart € {quantity * product.price}
+            Add to Cart € {(quantity * product.price).toFixed(2)}
           </Button>
         </div>
       </div>

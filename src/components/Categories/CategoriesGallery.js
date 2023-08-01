@@ -1,9 +1,9 @@
 import React, { memo } from "react";
-import styles from "./Categories.module.scss";
+import styles from "./CategoriesGallery.module.scss";
 import { useProductContext } from "common/context/ProductContext";
 import { Link } from "react-router-dom";
 
-const Categories = () => {
+const CategoriesGallery = () => {
   const { categories } = useProductContext();
 
   return (
@@ -13,9 +13,10 @@ const Categories = () => {
           let photo = require(`assets/categories/${category.photo}`);
           return (
             <li
+              key={category.id}
               className={styles[category.name]}
-            >
-            <Link to={`categories/${category.name}`}>  
+            > 
+            <Link to={`categories/${category.id}`}>  
               <div className={styles.overlay}></div>
               <img src={photo} alt={category.name}/>
               <h2>{category.name}</h2>
@@ -29,4 +30,4 @@ const Categories = () => {
   );
 };
 
-export default memo(Categories);
+export default memo(CategoriesGallery);

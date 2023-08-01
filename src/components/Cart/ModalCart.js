@@ -20,14 +20,14 @@ const ModalCart = () => {
         {cart.map((product) => {
           let img = require(`assets/categories/${product.photo}`);
           return (
-            <li>
+            <li key={product.id}>
               <div className={styles["img-container"]}>
                 <img src={img} alt={product.name} />
               </div>
               <div className={styles["info-container"]}>
                 <h3>{product.name}</h3>
                 <p className={styles.price}>
-                  € {product.quantity * product.price}
+                  € {(product.quantity * product.price).toFixed(2)}
                 </p>
                 <div className={styles["buttons-container"]}>
                   <IconButton aria-label="add" onClick={() => updateQuantity(product.id, 1)}>
@@ -44,7 +44,7 @@ const ModalCart = () => {
         })}
       </ul>
       <div className={styles['box-bottom']}>
-        <h2>Total: € {totalToPay}</h2>
+        <h2>Total: € {totalToPay.toFixed(2)}</h2>
         {/* <button>Checkout</button> */}
       </div>
     </div>

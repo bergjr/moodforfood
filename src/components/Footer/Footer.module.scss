@@ -1,0 +1,31 @@
+@import "styles/abstract/variables.scss";
+
+.container {
+  @include flex-column;
+  padding: 4rem;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  background-color: $primary-color;
+  color: #FFFFFF;
+  @include size-font(1.5em, $primary-font);
+  ul {
+    display: flex;
+    gap: 1rem;
+    li {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .container {
+    ul {
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+  }
+}  

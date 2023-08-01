@@ -5,32 +5,32 @@
     "id": 1,
     "products": [
       {
-        "name": "Burger",
+        "name": " Plain Burger",
         "price": 6.50,
-        "id": 1,
+        "id": 20,
         "photo": "burger.jpg",
-        "description": "Four 100% Irish beef patties, a slice of cheese, lettuce, onion and pickles. And the sauce, the special Mood For Food mayo. Burger comes with chips."
+        "description": "One 100% Irish beef patty, lettuce, onion and tomato, topped with ketchup on a plain bun. Burger served with chips."
       },
       {
         "name": "Cheeseburger",
         "price": 7.50,
-        "id": 2,
+        "id": 21,
         "photo": "burger.jpg",
-        "description": "Four 100% Irish beef patties, a slice of cheese, lettuce, onion and pickles. And the sauce, the special Mood For Food mayo. Burger comes with chips."
+        "description": "Two 100% Irish beef patties, two slices of cheddar cheese, melted blue cheese, lettuce, onion and pickles on a sesame seed bun. Burger served with chips."
       },
       {
         "name": "Quarter Pounder",
         "price": 10,
-        "id": 3,
+        "id": 22,
         "photo": "burger.jpg",
-        "description": "A quarter-pound patty of 100% Irish beef, with two slices of cheese, onions, pickles, mustard and a dollop of tomato ketchup in a sesame seed bun. Irresistible. Burger comes with chips."
+        "description": "A quarter-pound patty of 100% Irish beef, with a slice of cheddar cheese, onions, pickles, mustard and a dollop of tomato ketchup in a sesame seed bun. Irresistible! Burger served with chips."
       },
       {
         "name": "Monster",
         "price": 14,
-        "id": 4,
+        "id": 23,
         "photo": "burger.jpg",
-        "description": "Four 100% Irish beef patties, a slice of cheese, lettuce, onion and pickles. And the sauce, the special Mood For Food mayo. Burger comes with chips."
+        "description": "Our signature burger comes with three 100% Irish beef patties, streaky bacon, a slice of cheddar cheese, lettuce, onion and pickles, all on a large sesame seed bun drenched in our special Mood For Food mayo. Burger served with chips."
       }
     ]
   },
@@ -40,33 +40,34 @@
     "id": 2,
     "products": [
       {
-        "name": "Burger",
-        "price": 6.50,
-        "id": 1,
-        "photo": "burger.jpg",
-        "description": "Four 100% Irish beef patties, a slice of cheese, lettuce, onion and pickles. And the sauce, the special Mood For Food mayo. Burger comes with chips."
+        "name": "Berry Delicious",
+        "price": 3.50,
+        "id": 31,
+        "photo": "drinks/summer.jpg",
+        "description": "Summer has arrived! Made of raspberries, blackberries and strawberries for a berry tasty boost!"
       },
       {
-        "name": "Cheeseburger",
-        "price": 7.50,
-        "id": 2,
-        "photo": "burger.jpg",
-        "description": "Four 100% Irish beef patties, a slice of cheese, lettuce, onion and pickles. And the sauce, the special Mood For Food mayo. Burger comes with chips."
+        "name": "Green Paradise",
+        "price": 3.50,
+        "id": 32,
+        "photo": "drinks/green-paradise.jpg",
+        "description": "Made of mint, ginger and kiwi, this delicious drink is going take you to heaven!"
       },
       {
-        "name": "Quarter Pounder",
-        "price": 10,
-        "id": 3,
-        "photo": "burger.jpg",
-        "description": "A quarter-pound patty of 100% Irish beef, with two slices of cheese, onions, pickles, mustard and a dollop of tomato ketchup in a sesame seed bun. Irresistible. Burger comes with chips."
+        "name": "Vanilla Ice",
+        "price": 5,
+        "id": 34,
+        "photo": "drinks/vanilla.jpg",
+        "description": "Made of vanilla, Oreo biscuits and a secret ingredient, our vanilla smoothie is anything but boring!"
       },
       {
-        "name": "Monster",
-        "price": 14,
-        "id": 4,
-        "photo": "burger.jpg",
-        "description": "Four 100% Irish beef patties, a slice of cheese, lettuce, onion and pickles. And the sauce, the special Mood For Food mayo. Burger comes with chips."
+        "name": "Coke Can - 350ml",
+        "price": 1.20,
+        "id": 33,
+        "photo": "drinks/coke.jpg",
+        "description": "In the mood of an ice-cold Coke? Of course! Well, what are you waiting for?!"
       }
+     
     ]
   },
   {
@@ -75,67 +76,39 @@
     "id": 3,
     "products": [
       {
-        "name": "Burger",
-        "price": 6.50,
-        "id": 1,
-        "photo": "burger.jpg",
-        "description": "Four 100% Irish beef patties, a slice of cheese, lettuce, onion and pickles. And the sauce, the special Mood For Food mayo. Burger comes with chips."
+        "name": "Brownie",
+        "price": 4.50,
+        "id": 41,
+        "photo": "dessert/brownie.jpg",
+        "description": "This delicious brownie is made using the finest of the chocolate there is."
       },
       {
-        "name": "Cheeseburger",
-        "price": 7.50,
-        "id": 2,
-        "photo": "burger.jpg",
-        "description": "Four 100% Irish beef patties, a slice of cheese, lettuce, onion and pickles. And the sauce, the special Mood For Food mayo. Burger comes with chips."
-      },
-      {
-        "name": "Quarter Pounder",
-        "price": 10,
-        "id": 3,
-        "photo": "burger.jpg",
-        "description": "A quarter-pound patty of 100% Irish beef, with two slices of cheese, onions, pickles, mustard and a dollop of tomato ketchup in a sesame seed bun. Irresistible. Burger comes with chips."
-      },
-      {
-        "name": "Monster",
-        "price": 14,
-        "id": 4,
-        "photo": "burger.jpg",
-        "description": "Four 100% Irish beef patties, a slice of cheese, lettuce, onion and pickles. And the sauce, the special Mood For Food mayo. Burger comes with chips."
+        "name": "Apple Pie",
+        "price": 4.50,
+        "id": 42,
+        "photo": "dessert/apple-pie.jpg",
+        "description": "Baked with fresh apples, this apple pie is going to make your mouth water."
       }
     ]
   },
   {
-    "name": "arab",
+    "name": "Lebanese",
     "photo": "arab.jpg",
     "id": 4,
     "products": [
       {
-        "name": "Burger",
+        "name": "Tabule",
         "price": 6.50,
-        "id": 1,
-        "photo": "burger.jpg",
-        "description": "Four 100% Irish beef patties, a slice of cheese, lettuce, onion and pickles. And the sauce, the special Mood For Food mayo. Burger comes with chips."
+        "id": 51,
+        "photo": "arab/tabule.jpg",
+        "description": "Traditional salad made of bulgur, tomato, and finely chopped parsley and mint,  including onion and garlic, seasoned with olive oil, lemon juice and salt."
       },
       {
-        "name": "Cheeseburger",
-        "price": 7.50,
-        "id": 2,
-        "photo": "burger.jpg",
-        "description": "Four 100% Irish beef patties, a slice of cheese, lettuce, onion and pickles. And the sauce, the special Mood For Food mayo. Burger comes with chips."
-      },
-      {
-        "name": "Quarter Pounder",
-        "price": 10,
-        "id": 3,
-        "photo": "burger.jpg",
-        "description": "A quarter-pound patty of 100% Irish beef, with two slices of cheese, onions, pickles, mustard and a dollop of tomato ketchup in a sesame seed bun. Irresistible. Burger comes with chips."
-      },
-      {
-        "name": "Monster",
-        "price": 14,
-        "id": 4,
-        "photo": "burger.jpg",
-        "description": "Four 100% Irish beef patties, a slice of cheese, lettuce, onion and pickles. And the sauce, the special Mood For Food mayo. Burger comes with chips."
+        "name": "Falafel Sandwich",
+        "price": 8.90,
+        "id": 52,
+        "photo": "arab/falafel-sandwich.jpg",
+        "description": "Sandwich with freshly cooked falafels, one of our most popular dishes."
       }
     ]
   },
@@ -145,33 +118,19 @@
     "id": 5,
     "products": [
       {
-        "name": "Burger",
-        "price": 6.50,
-        "id": 1,
-        "photo": "burger.jpg",
-        "description": "Four 100% Irish beef patties, a slice of cheese, lettuce, onion and pickles. And the sauce, the special Mood For Food mayo. Burger comes with chips."
+        "name": "Ramen",
+        "price": 9,
+        "id": 61,
+        "photo": "japanese/ramen.jpg",
+        "description": "A delicious and very popular soup containing noodles, Irish pork, chopped spring onions, boiled egg and spices"
       },
       {
-        "name": "Cheeseburger",
-        "price": 7.50,
-        "id": 2,
-        "photo": "burger.jpg",
-        "description": "Four 100% Irish beef patties, a slice of cheese, lettuce, onion and pickles. And the sauce, the special Mood For Food mayo. Burger comes with chips."
-      },
-      {
-        "name": "Quarter Pounder",
-        "price": 10,
-        "id": 3,
-        "photo": "burger.jpg",
-        "description": "A quarter-pound patty of 100% Irish beef, with two slices of cheese, onions, pickles, mustard and a dollop of tomato ketchup in a sesame seed bun. Irresistible. Burger comes with chips."
-      },
-      {
-        "name": "Monster",
-        "price": 14,
-        "id": 4,
-        "photo": "burger.jpg",
-        "description": "Four 100% Irish beef patties, a slice of cheese, lettuce, onion and pickles. And the sauce, the special Mood For Food mayo. Burger comes with chips."
-      }
+        "name": "Spring Rolls",
+        "price": 5,
+        "id": 62,
+        "photo": "japanese/spiringurolu.jpg",
+        "description": "4 vegetable spring rolls for a tasty snack and a good vegetarian option."
+      }  
     ]
   },
   {
@@ -180,32 +139,11 @@
     "id": 6,
     "products": [
       {
-        "name": "Burger",
+        "name": "Tandoori Chicken",
         "price": 6.50,
-        "id": 1,
-        "photo": "burger.jpg",
-        "description": "Four 100% Irish beef patties, a slice of cheese, lettuce, onion and pickles. And the sauce, the special Mood For Food mayo. Burger comes with chips."
-      },
-      {
-        "name": "Cheeseburger",
-        "price": 7.50,
-        "id": 2,
-        "photo": "burger.jpg",
-        "description": "Four 100% Irish beef patties, a slice of cheese, lettuce, onion and pickles. And the sauce, the special Mood For Food mayo. Burger comes with chips."
-      },
-      {
-        "name": "Quarter Pounder",
-        "price": 10,
-        "id": 3,
-        "photo": "burger.jpg",
-        "description": "A quarter-pound patty of 100% Irish beef, with two slices of cheese, onions, pickles, mustard and a dollop of tomato ketchup in a sesame seed bun. Irresistible. Burger comes with chips."
-      },
-      {
-        "name": "Monster",
-        "price": 14,
-        "id": 4,
-        "photo": "burger.jpg",
-        "description": "Four 100% Irish beef patties, a slice of cheese, lettuce, onion and pickles. And the sauce, the special Mood For Food mayo. Burger comes with chips."
+        "id": 71,
+        "photo": "indian/tandoori-chicken.jpg",
+        "description": "Tandoori chicken is a South Asian dish of chicken marinated in yogurt and spices and roasted in a tandoor, a cylindrical clay oven."
       }
     ]
   },
@@ -215,32 +153,32 @@
     "id": 7,
     "products": [
       {
-        "name": "Devilish",
+        "name": "Diablo",
         "price": 14.60,
         "id": 10,
         "photo": "pizzas/devilish-pizza.webp",
-        "description": "Four 100% Irish beef patties, a slice of cheese, lettuce, onion and pickles. And the sauce, the special Mood For Food mayo. Burger comes with chips."
+        "description": "Devilishly tasty! This pizza comes with mozzarella, spicy tomato purée, pepperoni, red onion and hot Jalapeños."
       },
       {
-        "name": "Cheesepizza",
+        "name": "Quattro formaggi",
         "price": 11.20,
         "id": 11,
         "photo": "pizzas/cheeseburger-pizza.webp",
-        "description": "Four 100% Irish beef patties, a slice of cheese, lettuce, onion and pickles. And the sauce, the special Mood For Food mayo. Burger comes with chips."
+        "description": "Cheesy in a good way, this pizza comes with blue cheese, mature cheddar, emmental and pecorino, all deliciously melted together."
       },
       {
         "name": "Chicken Heaven",
         "price": 22.45,
         "id": 12,
         "photo": "pizzas/chicken-pizza.webp",
-        "description": "A quarter-pound patty of 100% Irish beef, with two slices of cheese, onions, pickles, mustard and a dollop of tomato ketchup in a sesame seed bun. Irresistible. Burger comes with chips."
+        "description": "This pizza will give you wings! Chicken strips on a bed of mozzarella, mushrooms, chopped peppers and tomato purée."
       },
       {
         "name": "Meaty",
         "price": 19.90,
         "id": 13,
         "photo": "pizzas/meaty.webp",
-        "description": "Four 100% Irish beef patties, a slice of cheese, lettuce, onion and pickles. And the sauce, the special Mood For Food mayo. Burger comes with chips."
+        "description": " This belly-busting pizza comes with pepperoni, bacon, chorizo and steak pieces, all on a bed on mozzarella and tomato purée."
       }
     ]
   },
@@ -250,32 +188,25 @@
     "id": 8,
     "products": [
       {
-        "name": "Burger",
-        "price": 6.50,
-        "id": 1,
-        "photo": "burger.jpg",
+        "name": "Bolognese",
+        "price": 11.60,
+        "id": 81,
+        "photo": "pasta/bolognese.jpg",
         "description": "Four 100% Irish beef patties, a slice of cheese, lettuce, onion and pickles. And the sauce, the special Mood For Food mayo. Burger comes with chips."
       },
       {
-        "name": "Cheeseburger",
-        "price": 7.50,
-        "id": 2,
-        "photo": "burger.jpg",
+        "name": "Carbonara",
+        "price": 14.20,
+        "id": 82,
+        "photo": "pasta/carbonara.jpg",
         "description": "Four 100% Irish beef patties, a slice of cheese, lettuce, onion and pickles. And the sauce, the special Mood For Food mayo. Burger comes with chips."
       },
       {
-        "name": "Quarter Pounder",
-        "price": 10,
-        "id": 3,
-        "photo": "burger.jpg",
+        "name": "Green Pesto",
+        "price": 12,
+        "id": 83,
+        "photo": "pasta/pesto.jpg",
         "description": "A quarter-pound patty of 100% Irish beef, with two slices of cheese, onions, pickles, mustard and a dollop of tomato ketchup in a sesame seed bun. Irresistible. Burger comes with chips."
-      },
-      {
-        "name": "Monster",
-        "price": 14,
-        "id": 4,
-        "photo": "burger.jpg",
-        "description": "Four 100% Irish beef patties, a slice of cheese, lettuce, onion and pickles. And the sauce, the special Mood For Food mayo. Burger comes with chips."
       }
     ]
   }

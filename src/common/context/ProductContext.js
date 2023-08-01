@@ -2,11 +2,11 @@ import { createContext, useContext, useState } from "react";
 import categories from "components/Categories/jsonfile.json";
 
 export const ProductContext = createContext();
-ProductContext.displayName = "Product"
+ProductContext.displayName = "Product";
 
 export const ProductProvider = ({ children }) => {
   const [showProductModal, setShowProductModal] = useState(false);
-  const [productsList, setProductsList] = useState([]);
+  const [productsList, setProductsList] = useState(categories[0].products);
   const [selectedProduct, setSelectedProduct] = useState({});
   const [quantity, setQuantity] = useState(1);
 
@@ -30,25 +30,28 @@ export const ProductProvider = ({ children }) => {
 };
 
 export const useProductContext = () => {
-   
-   const { 
-      categories, 
-      productsList,
-      setProductsList,
-      showProductModal,
-      setShowProductModal,
-      selectedProduct,
-      setSelectedProduct,
-      quantity,
-      setQuantity 
-    } 
-    = useContext(ProductContext);
+  const {
+    categories,
+    productsList,
+    setProductsList,
+    showProductModal,
+    setShowProductModal,
+    selectedProduct,
+    setSelectedProduct,
+    quantity,
+    setQuantity
+  } = useContext(ProductContext);
 
-  function updateProducts(name) {
-    const [newProducts] = categories.filter(
-      (category) => category.name === name
-    );
-    return setProductsList(newProducts.products);
+  function updateProducts(id) {
+    if (id) {
+      const [newProducts] = categories.filter(
+        (category) => category.id === Number(id)
+      );
+      return setProductsList(newProducts.products);
+    }
+    else {
+      return;
+    }
   }
 
   function selectProduct(product) {
