@@ -31,11 +31,16 @@
     .text-container {
       @include flex-column;
       align-items: center;
-      padding: 1rem;
+      padding: 1rem 1rem;
       gap: 1rem;
-      h2,
+      h2, h3 {
+        @include size-font(3rem, $primary-font);
+      }
       h3 {
-        @include size-font(2rem, $primary-font);
+        width: 100%;
+        height: 200px;
+        display: flex;
+        justify-content: center;
       }
       p.description {
         @include size-font(1.5rem, $secondary-font);
@@ -49,10 +54,11 @@
     @include flex-column;
     justify-content: center;
     align-items: center;
-    height: 150px;
+    height: 200px;
     width: 100%;
     border-top: 1px solid $dark-gray;
     box-shadow: 0px -1px 2px #000000;
+    padding: 1rem 0 3rem;
     .box-buttons {
       display: flex;
       align-items: center;
