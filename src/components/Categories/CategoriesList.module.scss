@@ -7,23 +7,32 @@
         gap: 1rem;
         justify-content: center;
         @include size-font(1em, $primary-font);
-        li {
-            background-color: $primary-color;
+        a.item {
             padding: 1rem;
-            color: hsl(0, 0%, 100%);
+            color: $primary-color;
             border-radius: 20px;
             text-transform: capitalize;
-            transition: all .5s;
+            transition: all .2s;
+            border: 1px solid #000000;
             &:hover {
-               background-color: $secondary-color;
-               color: $primary-color; 
+               background-color: $primary-color;
+               color: #FFFFFF; 
+               border: none;
             }
         }
+        a.active {
+            background-color: $primary-color;
+            color: #FFFFFF; 
+            border: none;
+        }
     }
+    
 }
 
 @media screen and (max-width: 780px) {
+    
     .list {
         flex-wrap: wrap;
+        height: 180px;
     }
 }    

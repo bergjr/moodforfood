@@ -1,5 +1,5 @@
 import ProductsList from 'components/Categories/ProductsList/ProductsList';
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './CategoriesPage.module.scss';
 import Product from 'components/Categories/ProductsList/Product/Product';
 import CategoriesList from 'components/Categories/CategoriesList';
@@ -10,6 +10,9 @@ import TextBox from 'components/TextBox/TextBox';
 const ProductsPage = () => {
 
     const categorySelected = useParams();
+    useEffect(() => {
+        window.scrollTo(0,0);
+    }, [])
     
     return (
         <main id="main" className={styles.main}>

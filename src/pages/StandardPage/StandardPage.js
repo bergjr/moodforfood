@@ -10,7 +10,7 @@ export function TransitionDown(props) {
 }
 
 const StandardPage = () => {
-  const { showSnackBar, closeSnackBar } = useCartContext();
+  const { showSnackBar, closeSnackBar, snackBarMessage } = useCartContext();
   return (
     <>
     <main className={styles.main}>
@@ -23,7 +23,7 @@ const StandardPage = () => {
         TransitionComponent={TransitionDown}
       >
         <Alert variant="filled" severity="success" className={styles.snackbar}>
-          Product added to the cart
+          {snackBarMessage}
         </Alert>
       </Snackbar>
     </main>

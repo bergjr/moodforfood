@@ -11,7 +11,7 @@ const Menu = (props) => {
     <nav className={styles.menu}>
       <ul className={styles["menu-desktop"]}>
         <li>
-          <Link to="/categories">Check our products</Link>
+          <Link to="/categories/1">Check our products</Link>
         </li>
         <li>
           <Badge

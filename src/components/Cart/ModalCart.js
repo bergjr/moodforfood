@@ -1,13 +1,13 @@
 import React from "react";
 import styles from "./ModalCart.module.scss";
 import { useCartContext } from "common/context/CartContext";
-import { IconButton } from "@mui/material";
+import { Button, IconButton } from "@mui/material";
 import AddCircle from "@mui/icons-material/Add";
 import CloseIcon from '@mui/icons-material/Close';
 import RemoveIcon from '@mui/icons-material/Remove';
 
 const ModalCart = () => {
-  const { cart, totalToPay, openCartHandler, updateQuantity } = useCartContext();
+  const { cart, totalToPay, openCartHandler, updateQuantity, checkout} = useCartContext();
   return (
     <div className={styles.cart} onClick={e => e.stopPropagation()}>
       <div className={styles["box-top"]}>
@@ -45,7 +45,9 @@ const ModalCart = () => {
       </ul>
       <div className={styles['box-bottom']}>
         <h2>Total: € {totalToPay.toFixed(2)}</h2>
-        {/* <button>Checkout</button> */}
+        <Button onClick={checkout} color="success" disabled={cart.length < 1} variant="contained">
+          Checkout
+        </Button>
       </div>
     </div>
   );

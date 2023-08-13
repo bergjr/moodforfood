@@ -9,7 +9,7 @@ export const CartProvider = ({ children }) => {
   const [totalToPay, setTotalToPay] = useState(0);
   const [showCart, setShowCart] = useState(false);
   const [showSnackBar, setShowSnackBar] = useState(false);
-
+  const [snackBarMessage, setSnackBarMessage] = useState("Product added to the cart")
   return (
     <CartContext.Provider
       value={{
@@ -20,7 +20,9 @@ export const CartProvider = ({ children }) => {
         showCart,
         setShowCart,
         showSnackBar,
-        setShowSnackBar
+        setShowSnackBar,
+        snackBarMessage,
+        setSnackBarMessage
       }}
     >
       {children}
@@ -37,17 +39,21 @@ export const useCartContext = () => {
     showCart,
     setShowCart,
     showSnackBar,
-    setShowSnackBar
+    setShowSnackBar,
+    snackBarMessage,
+    setSnackBarMessage
   } = useContext(CartContext);
 
   const { closeModal, quantity, setQuantity } = useProductContext();
 
   function addToCart(newProduct) {
     const productExist = cart.some((product) => product.id === newProduct.id);
+    if(snackBarMessage !== "Product added to the cart") {
+      setSnackBarMessage("Product added to the cart")
+    }
     setShowSnackBar(true);
     closeModal();
     if (!productExist) {
-      
       return setCart((oldCart) => [...oldCart, { ...newProduct, quantity: quantity }]);
     }
     const updatedCart = cart.map(product => {
@@ -64,7 +70,6 @@ export const useCartContext = () => {
       0
     );
     setTotalToPay(newTotal);
-    // setCart((oldCart) => oldCart.filter((product) => product.quantity > 0));
   }, [cart, setTotalToPay]);
 
   function openCartHandler() {
@@ -91,9 +96,18 @@ export const useCartContext = () => {
     return setCart(updatedCart);
   }
 
+  function checkout() {
+    setSnackBarMessage("Payment accepted. Have a nice meal!");
+    setShowSnackBar(true);
+    setShowCart(false);
+    setCart([]);
+  }
+
   function closeSnackBar() {
     setShowSnackBar(false);
   }
+
+ 
 
   return {
     quantity,
@@ -104,6 +118,8 @@ export const useCartContext = () => {
     cart,
     updateQuantity,
     showSnackBar,
-    closeSnackBar
+    closeSnackBar,
+    checkout,
+    snackBarMessage
   };
 };

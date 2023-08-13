@@ -1,0 +1,49 @@
+@import "styles/abstract/variables.scss";
+
+.container {
+    @include flex-column;
+    width: 40%;
+    height: 500px;
+    .img-box {
+        height: 50%;
+        img {
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+    .text-box {
+        border-right: 1px solid $dark-gray;
+        border-left: 1px solid $dark-gray;
+        border-bottom: 1px solid $dark-gray;
+        @include flex-column;
+        gap: .5rem;
+        padding: 2rem;
+        h2 {
+            @include size-font(1.5em, $primary-font);
+        }
+        p {
+            @include size-font(1.2em, $secondary-font); 
+        }
+        a {
+            background-color: $primary-color;
+            align-self: flex-start;
+            margin-top: 2rem;
+            padding: 1rem;
+            @include size-font(1em, $primary-font);
+            color: #FFFFFF;
+            border-radius: 20px;
+            box-shadow: 0 5px 5px $dark-gray;
+            transition: all .4s;
+            &:hover {
+                box-shadow: none;
+                transform: scale(.95);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 780px){
+    .container {
+        width: 90%;
+    }
+}

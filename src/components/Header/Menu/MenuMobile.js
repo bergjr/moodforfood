@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './MenuMobile.module.scss';
 import { AiOutlineClose } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 const MenuMobile = (props) => {
     return (
@@ -10,16 +11,10 @@ const MenuMobile = (props) => {
                     <AiOutlineClose onClick={() => props.menuHandler() } className={styles.close}/>
                 </li>                   
                 <li>
-                    <a onClick={() => props.menuHandler() } href="#banner">Home</a>
+                    <Link onClick={() => props.menuHandler() } to="/">Home</Link>
                 </li>
                 <li>
-                    <a onClick={() => props.menuHandler() } href="#about">About</a>
-                </li>
-                <li>
-                    <a onClick={() => props.menuHandler() } href="#projects">Projects</a>
-                </li>
-                <li>
-                    <a onClick={() => props.menuHandler() } href="#contact">Contact</a>
+                    <Link onClick={() => props.menuHandler() } to="/categories">Categories</Link>
                 </li>
             </ul>
         </div> 

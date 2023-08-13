@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./CategoriesList.module.scss";
 import { useProductContext } from "common/context/ProductContext";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const CategoriesList = () => {
   const { categories, updateProducts } = useProductContext();
@@ -12,9 +12,11 @@ const CategoriesList = () => {
         {categories.map((category) => {
           return (
           <li key={category.id}>
-            <Link to={`${category.id}`}>
+            <NavLink to={`${category.id}`} className={({ isActive, isPending }) =>
+    isPending ? "pending": isActive ? `${styles.item} ${styles.active}` : styles.item
+  }>
               {category.name}
-            </Link>
+            </NavLink>
           </li>
           );
         })}

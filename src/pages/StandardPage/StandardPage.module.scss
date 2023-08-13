@@ -4,8 +4,8 @@
     margin-top: 100px;
     .snackbar {
         @include size-font(1em, $primary-font);
-        background-color: black;
-        color: rgb(23, 201, 0);
+        background-color: $primary-color;
+        color: #FFFFFF;
         text-transform: uppercase;
     }
 }
