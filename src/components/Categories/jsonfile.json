@@ -8,28 +8,28 @@
         "name": " Plain Burger",
         "price": 6.50,
         "id": 20,
-        "photo": "burger.jpg",
+        "photo": "burgers/plain-burger.jpg",
         "description": "One 100% Irish beef patty, lettuce, onion and tomato, topped with ketchup on a plain bun. Burger served with chips."
       },
       {
         "name": "Cheeseburger",
         "price": 7.50,
         "id": 21,
-        "photo": "burger.jpg",
+        "photo": "burgers/cheeseburger.jpg",
         "description": "Two 100% Irish beef patties, two slices of cheddar cheese, melted blue cheese, lettuce, onion and pickles on a sesame seed bun. Burger served with chips."
       },
       {
         "name": "Quarter Pounder",
         "price": 10,
         "id": 22,
-        "photo": "burger.jpg",
+        "photo": "burgers/quarter-pounder.jpg",
         "description": "A quarter-pound patty of 100% Irish beef, with a slice of cheddar cheese, onions, pickles, mustard and a dollop of tomato ketchup in a sesame seed bun. Irresistible! Burger served with chips."
       },
       {
         "name": "Monster",
         "price": 14,
         "id": 23,
-        "photo": "burger.jpg",
+        "photo": "burgers/monster.jpg",
         "description": "Our signature burger comes with three 100% Irish beef patties, streaky bacon, a slice of cheddar cheese, lettuce, onion and pickles, all on a large sesame seed bun drenched in our special Mood For Food mayo. Burger served with chips."
       }
     ]
